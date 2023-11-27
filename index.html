@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BookNagar</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>  
     <link rel="stylesheet" href="./styles.css">
     <script src="./app.js", defer></script>
 </head>
@@ -21,107 +22,6 @@
 
     
     
-<body>
-    <div>
-        <h2>Budget</h2>
-        <table>
-            <tr>
-                <th>Budget</th>
-                <th>Expenses</th>
-                <th>Remaining Budget</th>
-            </tr>
-            <tr>
-                <td><input id="budgetInput" type="number"></td>
-                <td><input id="expensesInput" type="number"></td>
-                <td><input id="remainingBudgetInput" type="number"></td>
-            </tr>
-        </table>
-    </div>
-
-    <div>
-        <h2>Expenses</h2>
-        <table id="expenseTable">
-            <tr>
-                <th>Date</th>
-                <th>Expense Head</th>
-                <th>Expense Amount</th>
-                <th></th>
-                <th></th>
-            </tr>
-        </table>
-    </div>
-
-    <script>
-        function addExpense() {
-            var date = document.getElementById("dateInput").value;
-            var expenseHead = document.getElementById("expenseHeadInput").value;
-            var expenseAmount = document.getElementById("expenseAmountInput").value;
-
-            if (date === "" || expenseHead === "" || expenseAmount === "") {
-                alert("Please fill in all fields.");
-                return;
-            }
-
-            var table = document.getElementById("expenseTable");
-
-            var row = table.insertRow();
-            var dateCell = row.insertCell();
-            var expenseHeadCell = row.insertCell();
-            var expenseAmountCell = row.insertCell();
-            var editCell = row.insertCell();
-            var deleteCell = row.insertCell();
-
-            dateCell.innerHTML = date;
-            expenseHeadCell.innerHTML = expenseHead;
-            expenseAmountCell.innerHTML = expenseAmount;
-            editCell.innerHTML = '<button onclick="editExpense(this)">Edit</button>';
-            deleteCell.innerHTML = '<button onclick="deleteExpense(this)">Delete</button>';
-
-            updateRemainingBudget();
-            document.getElementById("dateInput").value = "";
-            document.getElementById("expenseHeadInput").value = "";
-            document.getElementById("expenseAmountInput").value = "";
-        }
-
-        function deleteExpense(button) {
-            var row = button.parentNode.parentNode;
-            row.parentNode.removeChild(row);
-            updateRemainingBudget();
-        }
-
-        function editExpense(button) {
-            var row = button.parentNode.parentNode;
-            var cells = row.getElementsByTagName("td");
-
-            var date = cells[0].innerHTML;
-            var expenseHead = cells[1].innerHTML;
-            var expenseAmount = cells[2].innerHTML;
-
-            document.getElementById("dateInput").value = date;
-            document.getElementById("expenseHeadInput").value = expenseHead;
-            document.getElementById("expenseAmountInput").value = expenseAmount;
-
-            row.parentNode.removeChild(row);
-            updateRemainingBudget();
-        }
-
-        function updateRemainingBudget() {
-            var budget = parseFloat(document.getElementById("budgetInput").value);
-            var expenses = parseFloat(document.getElementById("expensesInput").value);
-
-            var remainingBudget = budget - expenses;
-            document.getElementById("remainingBudgetInput
-
-
-
-
-
-
-    
-
-
-
-
     
 </body>
 </html>
