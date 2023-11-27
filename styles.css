@@ -1,0 +1,33 @@
+/* styling current date */
+.currentdate {
+    width: 1264px;
+    height: 37px;
+    background-color: rgba(5, 156, 5, 0.884);
+    margin-left: -10px;
+    margin-top: -10px;
+}
+#currentdate {
+            background-color: rgba(5, 156, 5, 0.884);
+            font-size: large;
+            color: whitesmoke;
+            margin: 8px;
+            overflow: auto;                      
+              
+}
+
+
+/* table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: center;
+}
+
+input[type="number"] {
+    width: 100%;
+    box-sizing: border-box;
+} */
