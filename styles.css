@@ -46,5 +46,10 @@ html,body{
 }
 
 .img {
-    
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 80%;
+    width: 30px;
+    height: 30px;
 }
